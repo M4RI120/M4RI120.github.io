@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background: #ffffff;
   color: #333;
 }
@@ -17,27 +17,26 @@ header {
   background-size: cover;
   background-position: center;
   height: 200px;
-
 }
+
 .encabezado {
-    background-size: cover;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 30px;
-  letter-spacing:.5cm;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;   /* Centra verticalmente */
-  align-items: center;       /* Centra horizontalmente */
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background-color: rgba(40, 81, 95, 0.694); /* Fondo oscuro semitransparente opcional */
+  background-color: rgba(40, 81, 95, 0.694);
   color: white;
   padding: 20px;
 }
-.encabezado p{
-    background-size: cover;
+
+.encabezado p {
   letter-spacing: normal;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 /* Layout principal */
@@ -55,24 +54,15 @@ header {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
-  /* Sticky para que se quede fijo */
   position: sticky;
   top: 0;
-
-  /* 🔽 Hace que el panel abarque toda la altura del viewport */
-  height: 100vh;
-
-  /* Opcional: para que su contenido se pueda hacer scroll si se desborda */
+  height: 100dvh;
   overflow-y: auto;
-
-  /* Asegura que esté encima si hay otros elementos */
   z-index: 999;
 }
 
-
 .panel-lateral h1 {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #01305f;
   margin-bottom: 10px;
 }
@@ -85,10 +75,7 @@ nav ul {
 nav li {
   margin-bottom: 10px;
 }
-nav a.active {
-  background-color: #004080;
-  color: white;
-}
+
 nav a {
   display: block;
   padding: 8px 12px;
@@ -101,12 +88,13 @@ nav a {
   transition: 0.3s;
 }
 
+nav a.active,
 nav a:hover {
   background-color: #004080;
   color: white;
 }
 
-/* Contenido principal (main) */
+/* Contenido principal */
 main {
   flex: 1;
   padding: 20px;
@@ -145,8 +133,9 @@ img {
   text-decoration: none;
   border-radius: 8px;
   font-weight: bold;
-  box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   z-index: 1000;
+  font-size: 1rem;
 }
 
 .boton-inicio:hover {
@@ -160,21 +149,8 @@ footer {
   background-color: #a3a3a3;
 }
 
-/* Responsive para pantallas pequeñas */
-@media (max-width: 768px) {
-  .contenido-principal {
-    flex-direction: column;
-  }
-
-  .panel-lateral {
-    width: 100%;
-  }
-
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+footer p {
+  line-height: 1.5;
 }
 
 /* Estilo para listas */
@@ -183,14 +159,52 @@ li {
   line-height: 1.5;
 }
 
-footer p {
-  text-align: center;
-  line-height: 1.5;
-}
-
 ul {
   padding-left: 20px;
 }
-p{
-    line-height: 1.5;
+
+p {
+  line-height: 1.5;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  header {
+    height: 120px;
+  }
+
+  .encabezado {
+    font-size: 1.5rem;
+    padding: 10px;
+    letter-spacing: 1px;
+  }
+
+  .encabezado p {
+    font-size: 1rem;
+  }
+
+  .contenido-principal {
+    flex-direction: column;
+  }
+
+  .panel-lateral {
+    width: 100%;
+    flex: none;
+    height: auto;
+    position: relative;
+  }
+
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .boton-inicio {
+    padding: 6px 10px;
+    font-size: 0.875rem;
+    bottom: 10px;
+    right: 10px;
+  }
 }
